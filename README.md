@@ -1,3 +1,14 @@
+# @andoniaina/react-modal
+
+Un composant **Modal React** simple et réutilisable, converti depuis un plugin jQuery modal, prêt à être utilisé dans n'importe quel projet React.
+
+## Installation
+
+Installe le package depuis npm :
+
+```bash
+npm install @andoniaina/react-modal
+
 🧩 Problématique initiale
 Limites de la solution jQuery
 
