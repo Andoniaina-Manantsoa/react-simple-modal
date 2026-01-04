@@ -9,6 +9,7 @@ export default defineConfig({
       entry: path.resolve(__dirname, "src/index.js"),
       name: "ReactSimpleModal",
       fileName: "index",
+      formats: ["es"],
     },
     rollupOptions: {
       external: ["react", "react-dom"],
