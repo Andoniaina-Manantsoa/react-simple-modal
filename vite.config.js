@@ -1,18 +1,23 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import path from "path";
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
   build: {
     lib: {
-      entry: path.resolve(__dirname, "src/index.js"),
-      name: "ReactSimpleModal",
-      fileName: "index",
-      formats: ["es"],
+      entry: 'src/index.jsx',
+      name: 'ReactModal',
+      formats: ['es', 'cjs'],
+      fileName: (format) => `index.${format}.js`
     },
     rollupOptions: {
-      external: ["react", "react-dom"],
-    },
-  },
+      external: ['react', 'react-dom'],
+      output: {
+        globals: {
+          react: 'React',
+          'react-dom': 'ReactDOM'
+        }
+      }
+    }
+  }
 });
