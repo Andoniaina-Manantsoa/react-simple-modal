@@ -1,6 +1,6 @@
 {
   "name": "@andoniaina/react-modal",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Reusable, accessible and customizable React modal component",
   "type": "module",
   "main": "dist/index.js",
@@ -11,9 +11,9 @@
   ],
   "exports": {
     ".": {
-    "types": "./dist/index.d.js",
-    "import": "./dist/index.esm.js",
-    "require": "./dist/index.js"
+      "types": "./dist/index.d.js",
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.js"
     }
   },
   "scripts": {
