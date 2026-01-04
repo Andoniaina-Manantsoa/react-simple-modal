@@ -63,6 +63,8 @@ export default function Modal({
                 className="modal-content"
                 onClick={(e) => e.stopPropagation()}
             >
+                {/* CROIX DE FERMETURE */}
+                <button className="modal-close" onClick={onClose}>×</button>
                 {children}
             </div>
         </div>
