@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     lib: {
-      entry: 'src/index.jsx',
+      entry: 'src/index.js',
       name: 'ReactModal',
       formats: ['es', 'cjs'],
       fileName: (format) => `index.${format}.js`
