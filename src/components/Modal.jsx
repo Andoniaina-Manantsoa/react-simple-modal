@@ -70,14 +70,14 @@ export default function Modal({
 
     return (
         <div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 transition-opacity"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black transition-opacity"
             style={{ transitionDuration: `${animationDuration}ms` }}
             onClick={handleOverlayClick}
             role="dialog"
             aria-modal="true"
         >
             <div
-                className={`relative w-[90%] max-w-md rounded-xl bg-white px-10 py-8 text-center shadow-xl border-2 ${currentVariant.border} animate-fadeIn`}
+                className={`relative w-[90%] max-w-md rounded-xl bg-blue px-10 py-8 text-center shadow-xl border-2 ${currentVariant.border} animate-fadeIn`}
                 onClick={(e) => e.stopPropagation()}
             >
                 {/* Icône variant */}
