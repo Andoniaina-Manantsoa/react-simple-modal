@@ -1,0 +1,46 @@
+/* src/styles/modal.css */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.modal {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    min-width: 300px;
+    text-align: center;
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+.modal.success {
+    border-left: 6px solid #2ecc71;
+}
+
+.modal.error {
+    border-left: 6px solid #e74c3c;
+}
+
+.modal button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

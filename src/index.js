@@ -1,4 +1,3 @@
-import { Modal } from "./components";
+// Expose Modal pour npm
+export { default as Modal } from "../src/components/Modal.jsx";
 
-export default Modal;
-export { Modal };
