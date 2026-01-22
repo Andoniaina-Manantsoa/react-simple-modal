@@ -71,13 +71,13 @@ closeOnEsc	   boolean	           true	            Active la fermeture avec la to
 
 ## ♿ Accessibilité
 
-- role="dialog"
+role="dialog"
 
-- aria-modal="true"
+aria-modal="true"
 
-- aria-label dynamique selon le type (Succès ou Erreur)
+aria-label dynamique selon le type (Succès ou Erreur)
 
-- Gestion clavier avec la touche ESC
+Gestion clavier avec la touche ESC
 
 ## 📄 Licence
 
