@@ -1,86 +1,141 @@
-# @andoniaina/react-modal
+# 📦 React Simple Modal
 
-Un composant **Modal React simple, léger et accessible**, prêt à l’emploi.  
-Il permet d’afficher des messages de succès ou d’erreur avec gestion du scroll, fermeture par clic extérieur et via la touche **ESC**.
-
-Idéal pour les applications React modernes.
+Un composant **Modal React simple, léger et réutilisable**, sans dépendances externes, idéal pour afficher des messages de confirmation ou d’information.
 
 ---
 
 ## ✨ Fonctionnalités
 
-- ✅ Modal contrôlée via la prop `isOpen`
-- ✅ Fermeture par clic sur l’overlay
-- ✅ Fermeture avec la touche **ESC** (configurable)
-- ✅ Blocage du scroll du body lorsque le modal est ouvert
-- ✅ Styles CSS inclus
-- ✅ Types de modal : `success` et `error`
-- ✅ Accessibilité intégrée (`role="dialog"`, `aria-modal`)
+* 📌 Facile à intégrer
+* ⚛️ Compatible React 18+
+* 🎨 Style personnalisable via CSS
+* ♻️ Réutilisable
+* 🚫 Aucune dépendance externe
 
 ---
 
-## ⚙️ Prérequis
+## 📥 Installation
 
-- **Node.js recommandé** : `>= 18.x`
-- **React** : `>= 17`
-
----
-
-## 📦 Installation
+Installe le package via **npm** :
 
 ```bash
 npm install @andoniaina/react-modal
+```
+
+ou avec **yarn** :
+
+```bash
+yarn add @andoniaina/react-modal
+```
 
 ---
 
-## Puis importe également le fichier CSS fourni par le package :
-
-import "@andoniaina/react-modal/Modal.css";
-
-
 ## 🚀 Utilisation
+
+### 1️⃣ Import du composant
+
+```js
+import { Modal } from "@andoniaina/react-modal";
+import "@andoniaina/react-modal/Modal.css";
+```
+
+---
+
+### 2️⃣ Exemple simple
+
+```jsx
 import { useState } from "react";
 import { Modal } from "@andoniaina/react-modal";
+import "@andoniaina/react-modal/Modal.css";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <>
+    <div>
       <button onClick={() => setIsOpen(true)}>
-        Ouvrir la modal
+        Ouvrir le modal
       </button>
 
       <Modal
         isOpen={isOpen}
         onClose={() => setIsOpen(false)}
-        type="success"
-        message="L’opération a été effectuée avec succès !"
-      />
-    </>
+        title="Succès"
+      >
+        <p>L'employé a été créé avec succès.</p>
+      </Modal>
+    </div>
   );
 }
 
-🧩 Props
-Prop	        Type	        Valeur par défaut	            Description
-isOpen	      boolean	              —	              Contrôle l’affichage du modal
-onClose	      function	            —	              Fonction appelée pour fermer le modal
-type	  "success" | "error"	    "success"	          Type du modal (impacte le style et l’accessibilité)
-message	       string	              ""	            Message affiché dans le modal
-closeOnEsc	   boolean	           true	            Active la fermeture avec la touche ESC
+export default App;
+```
 
-## ♿ Accessibilité
+---
 
-role="dialog"
+## 🧩 Props disponibles
 
-aria-modal="true"
+| Prop       | Type        | Description                     |
+| ---------- | ----------- | ------------------------------- |
+| `isOpen`   | `boolean`   | Ouvre ou ferme le modal         |
+| `onClose`  | `function`  | Fonction appelée à la fermeture |
+| `title`    | `string`    | Titre du modal                  |
+| `children` | `ReactNode` | Contenu du modal                |
 
-aria-label dynamique selon le type (Succès ou Erreur)
+---
 
-Gestion clavier avec la touche ESC
+## 🎨 Personnalisation du style
+
+Le composant inclut un fichier CSS par défaut :
+
+```js
+import "@andoniaina/react-modal/Modal.css";
+```
+
+Tu peux :
+
+* modifier ce fichier
+* ou surcharger les classes CSS dans ton projet
+
+---
+
+## 🛠️ Cas d’usage courant
+
+* Confirmation de création
+* Message de succès
+* Message d’erreur
+* Information utilisateur
+
+---
+
+## 📁 Structure du projet
+
+```bash
+react-simple-modal/
+├── src/
+│   ├── Modal.jsx
+│   ├── Modal.css
+│   └── index.js
+├── package.json
+├── README.md
+└── LICENSE
+```
+
+---
+
+## 🧪 Compatibilité
+
+* React 18+
+* Fonctionne avec Vite, CRA, Next.js
+
+---
 
 ## 📄 Licence
 
 MIT © Andoniaina
 
-export default App;
+---
+
+## 🎓 Contexte pédagogique
+
+Ce package a été développé dans le cadre du **projet HRnet (OpenClassrooms)**, visant à convertir une application jQuery vers React.
