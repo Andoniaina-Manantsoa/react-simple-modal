@@ -127,7 +127,7 @@ react-simple-modal/
 
 * React 18+
 * Fonctionne avec Vite, CRA, Next.js
-* Node > 17
+* Node > 20
 
 ---
 
